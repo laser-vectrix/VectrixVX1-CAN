@@ -336,7 +336,7 @@ argParser.add_argument('-vv',action='store_const',const=True, default=False,help
 argParser.add_argument('-vvv',action='store_const',const=True, default=False,help='verbose with bin')
 argParser.add_argument('-f',action='store_const',const=True, default=False,help='follow the file')
 argParser.add_argument('-d',action='store_const',const=True, default=False,help='for debugging print the original line')
-argParser.add_argument('-o',action='store_const',const=True, default=False,help='outputs a list separated by pipes good for being imported into Excel (it overerires -v -vv -vvv and does not print the summary (-q))')
+argParser.add_argument('-o',action='store_const',const=True, default=False,help='outputs a list separated by pipes good for being imported into Excel (it overrides -v -vv -vvv and does not print the summary (-q))')
 argParser.add_argument('-q',action='store_const',const=True, default=False,help='no summary')
 argParser.add_argument('-unusedPGN',action='store_const',const=True, default=False,help='show PGNs which are not used in the processed (and filtered) log')
 argParser.add_argument('-unlistedPGN',action='store_const',const=True, default=False,help='show only PGNs which are used but not in PGN.xml')
