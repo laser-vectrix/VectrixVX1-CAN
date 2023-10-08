@@ -11,9 +11,10 @@ e.g.: `0:00:21.000658 | 000000 | 8 | 00 00 00 00 00 00 00 00 | `
 2) PEAK PCANView recording older versions (don't know which)
 3) PEAK PCANView recording newwer versions (don't know which) - this is beta, please report any issues
 
-The Parser will process all the messages in the file and terminate with a summary of what was parsed and what are the unkown PGNs.
-All parsing is performed based on PGN.xml file, whitch can be updated to include new messages (there are some hardcoded values in the parser, such as BMS readings to be fixed in the future).
+The Parser will process all the messages in the file and terminate with a summary of what was parsed and what are the unknown PGNs.  All parsing is performed based on PGN.xml file, which can be updated to include new messages (there are some hardcoded values in the parser, such as BMS readings to be fixed in the future).
 A runtime presentation of values can be obtained with options: -o, -v, -vv or -vvv
+
+This parser and PGN file was built based on data from different VX1 found online. It may have some inconsistencies for a given model and specific VX1 configuration. Hopefully inconsistencies can be addressed in the PGN XML file.
 
 ```
 Usage: 
