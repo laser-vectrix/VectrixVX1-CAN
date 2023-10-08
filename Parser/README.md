@@ -5,9 +5,9 @@ $ python VX1Parser.py <datafile>
 
 
 <datafile> is the file with the CAN BUS messages recording and can assume 3 formats:
-1) plain (the default format) in which messages are recorded one per line with the following structure: <timestamp> | <ID> | <length> | <space separated bytes in hex> |
-e.g.:
-0:00:21.000658 | 000000 | 8 | 00 00 00 00 00 00 00 00 | 
+1) plain (the default format) in which messages are recorded one per line with the following structure: `<timestamp> | <ID> | <length> | <space separated bytes in hex> |`
+e.g.: `0:00:21.000658 | 000000 | 8 | 00 00 00 00 00 00 00 00 | `
+
 2) PEAK PCANView recording older versions (don't know which)
 3) PEAK PCANView recording newwer versions (don't know which) - this is beta, please report any issues
 
@@ -15,7 +15,7 @@ The Parser will process all the messages in the file and terminate with a summar
 All parsing is performed based on PGN.xml file, whitch can be updated to include new messages (there are some hardcoded values in the parser, such as BMS readings to be fixed in the future).
 A runtime presentation of values can be obtained with options: -o, -v, -vv or -vvv
 
-
+```
 Usage: 
 usage: VX1Parser.py [-h] [-p PGNfilename] [-pcan] [-pcan2] [-v] [-vv] [-vvv] [-f] [-d] [-o] [-q] [-unusedPGN] [-unlistedPGN]
                     [-e] [-c C] [-s S] [-sa SA] [-id ID] [-m]
@@ -49,3 +49,4 @@ options:
   -sa SA          filter and only process this Source Address
   -id ID          filter and only process this ID + SA
   -m              monitor a given ID (use with -id and one of -v, -vv, -vvv or -o)
+```
