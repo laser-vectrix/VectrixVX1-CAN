@@ -1,0 +1,2045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PGNChart>
+  <BikeModelID>VX1Li</BikeModelID>
+  <FileVersion>1.0.0.0</FileVersion>
+  <ReadPGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>MC SW</Label>
+      <ID>FEDA</ID>
+      <SA>05</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>BMS SW</Label>
+      <ID>FEDA</ID>
+      <SA>40</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>BMS SW</Label>
+      <ID>FEDA</ID>
+      <SA>41</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>BMS SW</Label>
+      <ID>FEDA</ID>
+      <SA>42</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked> <!-- not seen -->
+      <Label>BMS1 SW</Label>
+      <ID>FEDA</ID>
+      <SA>4D</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked> <!-- not seen -->
+      <Label>BMS2 SW</Label>
+      <ID>FEDA</ID>
+      <SA>4E</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>ICM Software Identification</Label>
+      <ID>FEDA</ID>
+      <SA>00</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <Label>Active Diagnostics Trouble Code</Label>
+      <ID>FECA</ID>
+      <SA>00</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <Label>Telltale Wrench</Label>
+      <ID>FECA</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>0</ScaleFactor>
+    </PGN>
+    <PGN>
+      <Label>Telltale left indicator</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>   
+    <PGN>
+    <Label>Telltale left indicator blink</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>0</Bytes>
+      <Bits>1</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN> 
+    <PGN>
+      <Label>Telltale right indicator</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>1</Bytes>
+      <Bits>4</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>   
+    <PGN>
+      <Label>Telltale right indicator blink</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>1</Bytes>
+      <Bits>5</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN> 
+    <PGN>
+      <Label>Telltale lower headlight?</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>0</Bytes>
+      <Bits>3 2</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN> 
+    <PGN>
+      <Label>Telltale upper light?</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>0</Bytes>
+      <Bits>6 7</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>   
+    <PGN>
+      <Label>Telltale blue headlight?</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>1</Bytes>
+      <Bits>1 0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>    
+    <PGN>
+      <Label>Telltale sidestand</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>0</Bytes>
+      <Bits>5 4</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>         
+    <PGN>    
+      <Label>Manufacturer Defined Usage</Label>
+      <ID>FF0F</ID>
+      <SA>00</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Module>ICM</Module>
+    </PGN>
+    <PGN>
+      <Label>Charger SW</Label>
+      <ID>FEDA</ID>
+      <SA>4C</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Module>Charger</Module>
+    </PGN>
+    <PGN>
+      <Label>Charger SW2</Label>
+      <ID>18FEDA</ID>
+      <SA>4C</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Module>Charger</Module>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Total Vehicle Distance</Label>
+      <PGNHash>0</PGNHash>
+      <ID>18FEE0</ID>
+      <SA>17</SA>
+      <Bytes>7 6 5 4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.05</ScaleFactor>
+      <Units>Km</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Distance</UnitsClass>
+    </PGN>
+    <PGN> <!-- created based on Azuro script -->
+      <checked>True</checked>
+      <Label>Plug icon</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEF7</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>1</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> <!-- created based on Azuro script -->
+      <checked>True</checked>
+      <Label>Charge icon</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEF7</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>3</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> <!-- created based on Azuro script -->
+      <checked>True</checked>
+      <Label>Battery Voltage</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEF7</ID>
+      <SA>4C</SA>
+      <Bytes>7</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>V</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> <!-- created based on Azuro script -->
+      <checked>True</checked>
+      <Label>Charger Current</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEF7</ID>
+      <SA>4C</SA>
+      <Bytes>4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.1</ScaleFactor>
+      <Units>A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> <!-- created based on Azuro script -->
+      <checked>False</checked> <!-- not seen -->
+      <Label>Charging Power</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEFD</ID>
+      <SA>4C</SA>
+      <Bytes>3 2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>W</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> 
+      <Label>Gauge level</Label>
+      <ID>FEFC</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.00390625</ScaleFactor> <!-- converts byte to % -->
+      <Units>N/A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>  
+    <PGN> 
+      <Label>Plug icon</Label>
+      <ID>FF0A</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>1 0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>C</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN> 
+    <PGN> 
+      <Label>Charger Bat Volts</Label>
+      <ID>FF0A</ID>
+      <SA>4C</SA>
+      <Bytes>3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>           
+    <PGN> 
+      <Label>Km traveled (charge)</Label>
+      <ID>FEF9</ID>
+      <SA>4C</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Kms</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>     
+    <PGN> 
+    <Label>Ah used (charge)</Label>
+      <ID>FEF9</ID>
+      <SA>4C</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.25</ScaleFactor>
+      <Units>Ah</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN> 
+    <Label>Kms/Ah average (charge)</Label>
+      <ID>FEF9</ID>
+      <SA>4C</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.5</ScaleFactor>
+      <Units>Kms</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>    
+    <PGN> 
+    <Label>Lifetime Kms</Label>
+      <ID>FEF9</ID>
+      <SA>4C</SA>
+      <Bytes>7 6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Kms</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>                
+    <PGN>    
+      <checked>True</checked>
+      <Label>Estimated Range Value</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEE0</ID>
+      <SA>4C</SA>
+      <Bytes>7 6 5 4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.5</ScaleFactor>
+      <Units>Km</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Distance</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>UKN1</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEE1</ID>
+      <SA>4C</SA>
+      <Bytes>4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Km</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Distance</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Average Distance Traveled Per Charge</Label>
+      <PGNHash>2</PGNHash>
+      <ID>FEE0</ID>
+      <SA>4C</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Km</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Distance</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Incremental Odometer Value</Label>
+      <PGNHash>3</PGNHash>
+      <ID>FEE0</ID>
+      <SA>05</SA>
+      <Bytes>7 6 5 4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.05</ScaleFactor>
+      <Units>Km</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Distance</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked><!-- Originally bits: 1, 0, But only bit 0 has been seen in usage-->
+      <Label>Ready Indicator</Label>
+      <PGNHash>4</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked><!-- Originally bits: 3, 2, But only bit 2 has been seen in usage-->
+      <Label>Go Indicator</Label>
+      <PGNHash>5</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>2</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked><!-- Originally bits: 5, 4, But only bit 4 has been seen in usage-->
+      <Label>Vehicle Power Enable</Label>
+      <PGNHash>6</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>4</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Brake Light For Regen</Label>
+      <PGNHash>7</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>1</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Speed in KPH</Label>
+      <PGNHash>8</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>KPH</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Speed</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Motor Controller Temp</Label>
+      <PGNHash>9</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Cap1 Temperature</Label>
+      <PGNHash>10</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Cap2 Temperature</Label>
+      <PGNHash>11</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>5</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Cap3 Temperature</Label>
+      <PGNHash>12</PGNHash>
+      <ID>FF05</ID>
+      <SA>05</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Time</Label>
+      <PGNHash>13</PGNHash>
+      <ID>18FEE6</ID>
+      <SA>17</SA>
+      <Bytes>0 1 2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>HH:MM:SS</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>TimeDate</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Total Hours</Label>
+      <PGNHash>14</PGNHash>
+      <ID>FEE6</ID>
+      <SA>17</SA>
+      <Bytes>3 4 5</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>YY:MM:DD</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>TimeDate</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Amp Seconds</Label>
+      <PGNHash>15</PGNHash>
+      <ID>EEE0</ID>
+      <SA>05</SA>
+      <Bytes>3 2 1 0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>3.2744E-05</ScaleFactor>
+      <Units>AmpSeconds</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Charge Delay</Label>
+      <PGNHash>16</PGNHash>
+      <ID>EEE0</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>15</ScaleFactor>
+      <Units>Min</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Time</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Measured Amp Hours</Label>
+      <PGNHash>17</PGNHash>
+      <ID>EEE0</ID>
+      <SA>05</SA>
+      <Bytes>5 4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Ahr</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Vehicle Speed</Label>
+      <PGNHash>18</PGNHash>
+      <ID>FEF1</ID>
+      <SA>05</SA>
+      <Bytes>2 1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.00390625</ScaleFactor>
+      <Units>Km/h</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Speed</UnitsClass>
+    </PGN>    
+    <PGN>
+      <Label>Charge Current</Label>
+      <PGNHash>19</PGNHash>
+      <ID>FEF1</ID>
+      <SA>4C</SA>
+      <Bytes>2 1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.000390625</ScaleFactor>
+      <Units>Amps</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Current</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>MC Bus Voltage</Label>
+      <PGNHash>20</PGNHash>
+      <ID>FEF1</ID>
+      <SA>05</SA>
+      <Bytes>6</Bytes><!-- Swapped with MC Current-->
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Volts</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Throttle</Label>
+      <PGNHash>21</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Front Brake Pedal</Label>
+      <PGNHash>22</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>3</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Rear Brake Pedal</Label>
+      <PGNHash>23</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>3</Bytes>
+      <Bits>2</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Kill Switch Off</Label>
+      <PGNHash>24</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>3</Bytes>
+      <Bits>4</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>sequence1?</Label>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>5</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>sequence2?</Label>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>7</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+    </PGN>
+    <PGN>
+      <checked>False</checked>
+      <Label>Seat Switch</Label>
+      <PGNHash>25</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>3</Bytes>
+      <Bits>5</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Side Stand</Label>
+      <PGNHash>26</PGNHash>
+      <ID>F003</ID>
+      <SA>00</SA>
+      <Bytes>3</Bytes>
+      <Bits>6</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Hours since last service</Label>
+      <PGNHash>27</PGNHash>
+      <ID>F004</ID>
+      <SA>00</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Time</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Date of Last Service</Label>
+      <PGNHash>28</PGNHash>
+      <ID>F004</ID>
+      <SA>00</SA>
+      <Bytes>3 2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>DATE</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Motor Controller ID Code</Label>
+      <PGNHash>29</PGNHash>
+      <ID>F005</ID>
+      <SA>00</SA>
+      <Bytes>ALL</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Motor ID Code</Label>
+      <PGNHash>30</PGNHash>
+      <ID>F006</ID>
+      <SA>00</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Manufacturing Code</Label>
+      <PGNHash>31</PGNHash>
+      <ID>F007</ID>
+      <SA>00</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Battery Pack ID Code</Label>
+      <PGNHash>32</PGNHash>
+      <ID>F008</ID>
+      <SA>00</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>0</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Bit</Units>
+      <Plottable>0</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Bit</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Calibration Temp</Label>
+      <PGNHash>33</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Ambient Temp</Label>
+      <PGNHash>34</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 6 Temp</Label>
+      <PGNHash>35</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 5 Temp</Label>
+      <PGNHash>36</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 4 Temp</Label>
+      <PGNHash>37</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 3 Temp</Label>
+      <PGNHash>38</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>5</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 2 Temp</Label>
+      <PGNHash>39</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Front Pack: Mod 1 Temp</Label>
+      <PGNHash>40</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4D</SA>
+      <Bytes>7</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Calibration Temp</Label>
+      <PGNHash>41</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Ambient Temp</Label>
+      <PGNHash>42</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 6 Temp</Label>
+      <PGNHash>43</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 5 Temp</Label>
+      <PGNHash>44</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 4 Temp</Label>
+      <PGNHash>45</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 3 Temp</Label>
+      <PGNHash>46</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>5</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 2 Temp</Label>
+      <PGNHash>47</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Rear Pack: Mod 1 Temp</Label>
+      <PGNHash>48</PGNHash>
+      <ID>FEF6</ID>
+      <SA>4E</SA>
+      <Bytes>7</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>False</checked>
+      <Label>Plot Data Current</Label>
+      <PGNHash>49</PGNHash>
+      <ID>FEE6</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Amps</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Amperes</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>Plot Data Voltage</Label>
+      <PGNHash>50</PGNHash>
+      <ID>FEE6</ID>
+      <SA>05</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>False</checked>
+      <Label>Plot Data Battery Level</Label>
+      <PGNHash>51</PGNHash>
+      <ID>FEE6</ID>
+      <SA>05</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>N/A</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Plot Data Highest Bat Temp</Label>
+      <PGNHash>52</PGNHash>
+      <ID>FEE6</ID>
+      <SA>05</SA>
+      <Bytes>3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>False</checked>
+      <Label>Plot Data Speed</Label>
+      <PGNHash>53</PGNHash>
+      <ID>FEE6</ID>
+      <SA>05</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>KPH</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Velocity</UnitsClass>
+    </PGN>
+    <PGN>
+      <checked>True</checked>
+      <Label>MC Bus Current</Label>
+      <PGNHash>54</PGNHash>
+      <ID>FEF1</ID>
+      <SA>05</SA>
+      <Bytes>7</Bytes><!-- Swapped with MC Voltage-->
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Amps</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Amperes</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 1 Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>55</PGNHash>
+      <ID>FDF0</ID>
+      <SA>41</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 2 Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>56</PGNHash>
+      <ID>FDF0</ID>
+      <SA>41</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 3 Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>57</PGNHash>
+      <ID>FDF0</ID>
+      <SA>41</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 4 Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>58</PGNHash>
+      <ID>FDF0</ID>
+      <SA>41</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 5 Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>59</PGNHash>
+      <ID>FDF0</ID>
+      <SA>41</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 6 Voltage</Label>
+      <PGNHash>60</PGNHash>
+      <ID>FDF0</ID>
+      <SA>42</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 7 Voltage</Label>
+      <PGNHash>61</PGNHash>
+      <ID>FDF0</ID>
+      <SA>42</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 8 Voltage</Label>
+      <PGNHash>62</PGNHash>
+      <ID>FDF0</ID>
+      <SA>42</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 9 Voltage</Label>
+      <PGNHash>63</PGNHash>
+      <ID>FDF0</ID>
+      <SA>42</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 10 Voltage</Label>
+      <PGNHash>64</PGNHash>
+      <ID>FDF0</ID>
+      <SA>42</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 11 Voltage</Label>
+      <PGNHash>65</PGNHash>
+      <ID>FDF0</ID>
+      <SA>43</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 12 Voltage</Label>
+      <PGNHash>66</PGNHash>
+      <ID>FDF0</ID>
+      <SA>43</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 13 Voltage</Label>
+      <PGNHash>67</PGNHash>
+      <ID>FDF0</ID>
+      <SA>43</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 14 Voltage</Label>
+      <PGNHash>68</PGNHash>
+      <ID>FDF0</ID>
+      <SA>43</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 15 Voltage</Label>
+      <PGNHash>69</PGNHash>
+      <ID>FDF0</ID>
+      <SA>43</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 16 Voltage</Label>
+      <PGNHash>70</PGNHash>
+      <ID>FDF0</ID>
+      <SA>44</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 17 Voltage</Label>
+      <PGNHash>71</PGNHash>
+      <ID>FDF0</ID>
+      <SA>44</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 18 Voltage</Label>
+      <PGNHash>72</PGNHash>
+      <ID>FDF0</ID>
+      <SA>44</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 19 Voltage</Label>
+      <PGNHash>73</PGNHash>
+      <ID>FDF0</ID>
+      <SA>44</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 20 Voltage</Label>
+      <PGNHash>74</PGNHash>
+      <ID>FDF0</ID>
+      <SA>44</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 21 Voltage</Label>
+      <PGNHash>75</PGNHash>
+      <ID>FDF0</ID>
+      <SA>45</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 22 Voltage</Label>
+      <PGNHash>76</PGNHash>
+      <ID>FDF0</ID>
+      <SA>45</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 23 Voltage</Label>
+      <PGNHash>77</PGNHash>
+      <ID>FDF0</ID>
+      <SA>45</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 24 Voltage</Label>
+      <PGNHash>78</PGNHash>
+      <ID>FDF0</ID>
+      <SA>45</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 25 Voltage</Label>
+      <PGNHash>79</PGNHash>
+      <ID>FDF0</ID>
+      <SA>45</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 26 Voltage</Label>
+      <PGNHash>80</PGNHash>
+      <ID>FDF0</ID>
+      <SA>46</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 27 Voltage</Label>
+      <PGNHash>81</PGNHash>
+      <ID>FDF0</ID>
+      <SA>46</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 28 Voltage</Label>
+      <PGNHash>82</PGNHash>
+      <ID>FDF0</ID>
+      <SA>46</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 29 Voltage</Label>
+      <PGNHash>83</PGNHash>
+      <ID>FDF0</ID>
+      <SA>46</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 30 Voltage</Label>
+      <PGNHash>84</PGNHash>
+      <ID>FDF0</ID>
+      <SA>46</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 31 Voltage</Label>
+      <PGNHash>85</PGNHash>
+      <ID>FDF0</ID>
+      <SA>47</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 32 Voltage</Label>
+      <PGNHash>86</PGNHash>
+      <ID>FDF0</ID>
+      <SA>47</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 33 Voltage</Label>
+      <PGNHash>87</PGNHash>
+      <ID>FDF0</ID>
+      <SA>47</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 34 Voltage</Label>
+      <PGNHash>88</PGNHash>
+      <ID>FDF0</ID>
+      <SA>47</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 35 Voltage</Label>
+      <PGNHash>89</PGNHash>
+      <ID>FDF0</ID>
+      <SA>47</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 36 Voltage</Label>
+      <PGNHash>90</PGNHash>
+      <ID>FDF0</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 37 Voltage</Label>
+      <PGNHash>91</PGNHash>
+      <ID>FDF0</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 38 Voltage</Label>
+      <PGNHash>92</PGNHash>
+      <ID>FDF0</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 39 Voltage</Label>
+      <PGNHash>93</PGNHash>
+      <ID>FDF0</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Cell 40 Voltage</Label>
+      <PGNHash>94</PGNHash>
+      <ID>FDF0</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board Temperature Low</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board Temperature High</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>1</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN> 
+	<PGN>
+      <Label>Li Board Temperature Amb</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>       
+  	<PGN>
+      <Label>Li Board Hi Cell Voltage</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>3 4</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.0015</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>    
+    <PGN>
+      <Label>Li Board Hi Cell</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>4</Bytes>
+      <Bits>4 5 6 7</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>  
+    <PGN>
+      <Label>Li Board Low Cell</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>6</Bytes>
+      <Bits>4 5 6 7</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>
+    <PGN>
+      <Label>Li Board number</Label>
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>7</Bytes>
+      <Bits>4 5 6 7</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>         
+	<PGN>
+      <Label>Li Board0 Low Temperature</Label>
+      <PGNHash>96</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+  	<PGN>
+      <Label>Li Board Low Cell Voltage</Label>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>5 6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>0.0015</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>     
+	<PGN>
+      <Label>Li Board1 Hi Temperature</Label>
+      <PGNHash>97</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board1 Low Temperature</Label>
+      <PGNHash>98</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board2 Hi Temperature</Label>
+      <PGNHash>99</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board2 Low Temperature</Label>
+      <PGNHash>100</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board3 Hi Temperature</Label>
+      <PGNHash>101</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board3 Low Temperature</Label>
+      <PGNHash>102</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board0 Ambient Temperature</Label>
+      <PGNHash>103</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board1 Ambient Temperature</Label>
+      <PGNHash>104</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board2 Ambient Temperature</Label>
+      <PGNHash>105</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board3 Ambient Temperature</Label>
+      <PGNHash>106</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>DegC</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Temp</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board0 Hi Cell Voltage</Label>
+      <PGNHash>107</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board0 Low Cell Voltage</Label>
+      <PGNHash>108</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board1 Hi Cell Voltage</Label>
+      <PGNHash>109</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board1 Low Cell Voltage</Label>
+      <PGNHash>110</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board2 Hi Cell Voltage</Label>
+      <PGNHash>111</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board2 Low Cell Voltage</Label>
+      <PGNHash>112</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board3 Hi Cell Voltage</Label>
+      <PGNHash>113</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<PGN>
+      <Label>Li Board3 Low Cell Voltage</Label>
+      <PGNHash>114</PGNHash>
+      <ID>FEF3</ID>
+      <SA>48</SA>
+      <Bytes>6</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>Volts</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>Voltage</UnitsClass>
+    </PGN>
+	<!-- <PGN>
+      <Label>Clock display?</Label>
+      <PGNHash>1</PGNHash>
+      <ID>FEEC</ID>
+      <SA>F9</SA>
+      <Bytes>0 1 2 3</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+    </PGN>    -->
+    <!-- <PGN>
+      <Label>EEPROM R/W addr</Label>
+      <PGNHash>1</PGNHash>
+      <ID>18EF4C</ID>
+      <SA>F9</SA>
+      <Bytes>1 0</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+    </PGN>  
+    <PGN>
+      <Label>EEPROM R/W val</Label>
+      <PGNHash>1</PGNHash>
+      <ID>18EF4C</ID>
+      <SA>F9</SA>
+      <Bytes>2</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+    </PGN>   -->
+    <!-- <PGN>
+      <Label>EEPROM R/W</Label>
+      <PGNHash>1</PGNHash>
+      <ID>18EF4C</ID>
+      <SA>F9</SA>
+      <Bytes>4 5 6 7</Bytes>
+      <Bits>ALL</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+    </PGN>   -->
+  </ReadPGN>
+  <CmdPGN />
+  <CustomReadPGN>
+  </CustomReadPGN>
+  <CustomCmdPGN />
+  <DefaultType />
+</PGNChart>
