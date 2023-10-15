@@ -69,10 +69,14 @@ def addSA(ID,val,element):
     else:
         element['values'][val]['c']=element['values'][val]['c']+1
 
+x_labels={}
+x_n_labels=0
+x_output={}
 #
 # for every field parsed, print it
 #
 def printParsedField(count,TIME,ID,label,value,scale,hex,Verbose):
+    global x_labels,x_n_labels,x_output
     if count<16: # header of the PEAK file
         return ""
     global CSVLINE
@@ -94,7 +98,17 @@ def printParsedField(count,TIME,ID,label,value,scale,hex,Verbose):
             print(count,TIME,ID,label,'=',round(value*scale,3),binary)
         else:
             print(count,TIME,ID,label,'=',value,binary)
-    if (Verbose==100 or Verbose==200 )and label!='data': # Override verbose, print CSV Line
+    if Verbose==300 and label!='data':
+        if type(value) == int or type(value) == float:
+            value = round(value*scale,3)
+        if not label in x_labels:
+            x_n_labels=x_n_labels+1
+            x_labels[label]=x_n_labels  
+        if not count in x_output: 
+            x_output[count]={x_labels[label]:value}
+        else:
+            x_output[count][x_labels[label]]=value
+    if (Verbose==100 or Verbose==200 ): # Override verbose, print CSV Line
         if type(value) == int or type(value) == float:
             value = round(value*scale,3)
         CSVLINE=CSVLINE+label+' = '+str(value)+'; ' # instead of printing, add to the print buffer until a full line is completed
@@ -336,7 +350,10 @@ argParser.add_argument('-vv',action='store_const',const=True, default=False,help
 argParser.add_argument('-vvv',action='store_const',const=True, default=False,help='verbose with bin')
 argParser.add_argument('-f',action='store_const',const=True, default=False,help='follow the file')
 argParser.add_argument('-d',action='store_const',const=True, default=False,help='for debugging print the original line')
-argParser.add_argument('-o',action='store_const',const=True, default=False,help='outputs a list separated by pipes good for being imported into Excel (it overrides -v -vv -vvv and does not print the summary (-q))')
+argParser.add_argument('-o',action='store_const',const=True, default=False,help='outputs a verbose list separated by pipes good for being imported into Excel (it overwrites -v -vv -vvv and does not print the summary (-q))')
+argParser.add_argument('-x',action='store_const',const=True, default=False,help='outputs a list separated by TABs with each PGN in a column for Excel (overwrites -o -v -vv -vvv and does not print the summary (-q))')
+argParser.add_argument('-xx',action='store_const',const=True, default=False,help='same as -x but values in each line stick until updated')
+argParser.add_argument('-xxx',action='store_const',const=True, default=False,help='same as -xx but only starts printing after all columns have values')
 argParser.add_argument('-q',action='store_const',const=True, default=False,help='no summary')
 argParser.add_argument('-unusedPGN',action='store_const',const=True, default=False,help='show PGNs which are not used in the processed (and filtered) log')
 argParser.add_argument('-unlistedPGN',action='store_const',const=True, default=False,help='show only PGNs which are used but not in PGN.xml')
@@ -365,6 +382,9 @@ if args.o:
         verbose=200
     else:
         verbose=100
+if args.x or args.xx or args.xxx:
+    verbose=300
+    args.q=True
 
 elapsed=args.e
 filterSA=args.sa
@@ -405,8 +425,9 @@ while True and (args.c==0 or count < args.c):
         last_time=temp_time
     if INITTIME == "":
         INITTIME=TIME
-## finish by printing report if not quite
-print("Sampled from {} to {}".format(INITTIME,TIME))
+## finish by printing report if not quite mode
+if not args.q:
+    print("Sampled from {} to {}".format(INITTIME,TIME))
 if args.unlistedPGN:
     print("UnlistedPGN: ")
     for pgn in UnlistedPGN:
@@ -422,3 +443,30 @@ elif not args.q and not args.o:
     for sa in SAs:
         print(sa,SAs[sa])
 file.close()
+if args.x or args.xx or args.xxx:
+    print('Line NR\t'+" ".join('{} \t'.format(x) for x in x_labels))
+    line_value={}
+    for linenr in x_output:
+        position=0
+        line=str(linenr)+'\t'
+        line_value[position]=str(linenr)
+        position=position+1
+        for l in x_output[linenr]:
+            for i in range(position,l):
+                line=line+'\t '
+                position=position+1
+            line=line+str(x_output[linenr][l])
+            line_value[position]=str(x_output[linenr][l])
+        if args.x:
+            print(line)
+        elif args.xx:
+            line=''
+            for val in line_value:
+                line=line+line_value[val]+'\t'
+            print(line)
+        elif args.xxx and position==len(x_labels):
+            line=''
+            for val in line_value:
+                line=line+line_value[val]+'\t'
+            print(line)
+    

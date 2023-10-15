@@ -154,7 +154,7 @@
       <ScaleFactor>1</ScaleFactor>
       <Module>ICM</Module>
     </PGN>         
-    <PGN>    
+    <!-- <PGN>    
       <Label>Manufacturer Defined Usage</Label>
       <ID>FF0F</ID>
       <SA>00</SA>
@@ -162,7 +162,7 @@
       <Bits>ALL</Bits>
       <ScaleFactor>0</ScaleFactor>
       <Module>ICM</Module>
-    </PGN>
+    </PGN> -->
     <PGN>
       <Label>Charger SW</Label>
       <ID>FEDA</ID>
@@ -282,9 +282,9 @@
       <ID>FF0A</ID>
       <SA>4C</SA>
       <Bytes>0</Bytes>
-      <Bits>1 0</Bits>
+      <Bits>1</Bits>
       <ScaleFactor>1</ScaleFactor>
-      <Units>C</Units>
+      <Units>Bit</Units>
       <Plottable>0</Plottable>
       <Selected>0</Selected>
       <UnitsClass>N/A</UnitsClass>
