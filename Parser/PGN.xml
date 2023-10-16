@@ -66,14 +66,14 @@
       <Bits>ALL</Bits>
       <ScaleFactor>0</ScaleFactor>
     </PGN>
-    <PGN>
+    <!-- <PGN>
       <Label>Active Diagnostics Trouble Code</Label>
       <ID>FECA</ID>
       <SA>00</SA>
       <Bytes>ALL</Bytes>
       <Bits>ALL</Bits>
       <ScaleFactor>0</ScaleFactor>
-    </PGN>
+    </PGN> -->
     <PGN>
       <Label>Telltale Wrench</Label>
       <ID>FECA</ID>

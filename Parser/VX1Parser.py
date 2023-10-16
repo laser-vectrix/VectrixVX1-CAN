@@ -75,39 +75,41 @@ x_output={}
 #
 # for every field parsed, print it
 #
-def printParsedField(count,TIME,ID,label,value,scale,hex,Verbose):
+def printParsedField(countLinePF,TIME,ID,label,value,scale,hex,Verbose):
     global x_labels,x_n_labels,x_output
-    if count<16: # header of the PEAK file
+    if countLinePF<16: # header of the PEAK file
         return ""
     global CSVLINE
     if Verbose==1:
         if scale != None:
-            print(count,TIME,ID,label,'=',round(value*scale,3))
+            print(countLinePF,TIME,ID,label,'=',round(value*scale,3))
         else:
-            print(count,TIME,ID,label,'=',value)
+            print(countLinePF,TIME,ID,label,'=',value)
     if Verbose==2:
         if scale != None:
-            print(count,TIME,ID,label,'=',round(value*scale,3),hex)
+            print(countLinePF,TIME,ID,label,'=',round(value*scale,3),hex)
         else:
-            print(count,TIME,ID,label,'=',value,hex)
+            print(countLinePF,TIME,ID,label,'=',value,hex)
     if Verbose==3:
         binary=''
         for byte in hex.split(' '):
             binary=binary+' '+bin(int(byte, 16))[2:].zfill(8)
         if scale != None:
-            print(count,TIME,ID,label,'=',round(value*scale,3),binary)
+            print(countLinePF,TIME,ID,label,'=',round(value*scale,3),binary)
         else:
-            print(count,TIME,ID,label,'=',value,binary)
+            print(countLinePF,TIME,ID,label,'=',value,binary)
     if Verbose==300 and label!='data':
         if type(value) == int or type(value) == float:
             value = round(value*scale,3)
         if not label in x_labels:
             x_n_labels=x_n_labels+1
-            x_labels[label]=x_n_labels  
-        if not count in x_output: 
-            x_output[count]={x_labels[label]:value}
+            x_labels[label]=x_n_labels          
+        if not countLinePF in x_output: 
+            x_output[countLinePF]={x_labels[label]:value}
+            #print(countLinePF,label,value)
         else:
-            x_output[count][x_labels[label]]=value
+            x_output[countLinePF][x_labels[label]]=value
+            #print(countLinePF,label,value,x_output[countLinePF],x_labels[label],x_output[countLinePF][x_labels[label]])
     if (Verbose==100 or Verbose==200 ): # Override verbose, print CSV Line
         if type(value) == int or type(value) == float:
             value = round(value*scale,3)
@@ -175,8 +177,10 @@ def parsePEAKTrace2(count,line,lastTIME,Elapsed,Verbose,FilterSA,FilterID):
         # print('t0',len(t0),' COUNT=',count,'line=',line,'t0=',t0)
         return ""
 
-def interpret(count,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDATA):
-
+skip=0
+def interpret(c,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDATA):
+    global skip
+    count=int(c)
     if not LEN.isnumeric():
         print('LEN: expected a number, but none found. Incorrect format: ',LEN)
         exit(1)
@@ -185,6 +189,13 @@ def interpret(count,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HE
         return ""
     if FilterSA != None and (not SA in FilterSA):
         return ""
+
+    if args.sample:
+        if skip<int(args.sample[0]):
+            skip=skip+1
+            count=count-skip
+        else:
+            skip=0
 
     # check if there is more than 1 second inactivity and print that (if Elapsed option)
     if Elapsed and lastTIME != "":
@@ -362,6 +373,7 @@ argParser.add_argument('-c',type=int, default=0,help='the number of lines (inclu
 argParser.add_argument('-s',type=int, default=0,help='the number of lines (inclusive invalid ones) to skip before processing (default 0). If greater than -c no lines will be processed.')
 argParser.add_argument('-sa',nargs=1,help='filter and only process this Source Address')
 argParser.add_argument('-id',nargs=1,help='filter and only process this ID + SA')
+argParser.add_argument('-sample',nargs=1,help='merges N lines into a single one')
 argParser.add_argument('-m',action='store_const',const=True, default=False,help='monitor a given ID (use with -id and one of -v, -vv, -vvv or -o)')
 args = argParser.parse_args()
 
@@ -455,8 +467,8 @@ if args.x or args.xx or args.xxx:
             for i in range(position,l):
                 line=line+'\t '
                 position=position+1
-            line=line+str(x_output[linenr][l])
-            line_value[position]=str(x_output[linenr][l])
+            line=line+str(x_output[linenr][position])
+            line_value[position]=str(x_output[linenr][position])
         if args.x:
             print(line)
         elif args.xx:
