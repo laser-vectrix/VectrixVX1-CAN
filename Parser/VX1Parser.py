@@ -415,6 +415,8 @@ file=args.file
 temp_time=""
 last_time=""
 count = 0
+if args.f:
+    file.seek(0,2) # go to the end of the file
 while True and (args.c==0 or count < args.c):
     count += 1
     line = file.readline()
