@@ -220,6 +220,9 @@ def interpret(c,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDAT
     # convert hex pdu string to binnary data
     DATA=binascii.unhexlify(hex)
 
+    if args.m:
+        time.sleep(0.02)
+        print(chr(27) + "[2J")
 
     if ID in PGNdict:
         PGNbytes=PGNdict[ID] # get our data (bytes) about this ID
@@ -313,9 +316,7 @@ def interpret(c,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDAT
                 SAs[ID[6:8]]['idList'].append(ID)
         else:
             SAs[ID[6:8]]={'idList':[ID],'labels':[]}
-    if args.m:
-        time.sleep(0.02)
-        print(chr(27) + "[2J")
+
 
     printCSVline(count,TIME,ID,SA,HEXDATA,Verbose)
     return TIME
@@ -456,7 +457,7 @@ elif not args.q and not args.o:
         print(sa,SAs[sa])
 file.close()
 if args.x or args.xx or args.xxx:
-    print('Line NR\t'+" ".join('{} \t'.format(x) for x in x_labels))
+    print('Line NR\t'+"".join('{}\t'.format(x.strip()) for x in x_labels))
     line_value={}
     for linenr in x_output:
         position=0
