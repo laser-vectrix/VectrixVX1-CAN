@@ -139,12 +139,17 @@ def printService(label, value, scale):
     if label=='Li Board number': # for this to work this field needs to be first than others Board fields in the XML
         BMS_nr=value           
     if label=='Li Board Temperature Low':
+        v=int(value*scale)
+        if v<40:
+            attr=curses.A_NORMAL
+        else:
+            attr=curses.A_STANDOUT        
         if BMS_nr==0:
-            stdscr.addstr(12,4,'Board 0: '+str(int(value*scale))+' C')      
+            stdscr.addstr(12,4,'Board 0: '+str(v)+' C',attr)      
         if BMS_nr==1:
-            stdscr.addstr(13,4,'Board 1: '+str(int(value*scale))+' C')
+            stdscr.addstr(13,4,'Board 1: '+str(v)+' C',attr)
         if BMS_nr==2:
-            stdscr.addstr(14,4,'Board 2: '+str(int(value*scale))+' C')  
+            stdscr.addstr(14,4,'Board 2: '+str(v)+' C',attr)  
     if label=='Li Board Temperature High':
         v=int(value*scale)
         if v<40:
