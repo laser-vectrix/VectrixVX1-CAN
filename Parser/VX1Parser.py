@@ -237,25 +237,20 @@ def interpret(c,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDAT
                         if bits=='ALL': # This ID uses all bits in the above byte -> the value is the full byte (according with the PGN)
                             element=PGNbytes[byte][bits]
                             if element['units'] == 'BMS': # its a BMS message decode accordingly
-                                c0b=float(DATA[0]*2.4)/100
-                                c0e=float((DATA[5]&0x0F))*0.002
-                                c0=round(c0b+c0e,3)
+                                c0=float(DATA[0]<<4 | DATA[5]&0x0F)
+                                c0=round((c0*1.5)/1000,3)
                                 printParsedField(count,TIME,ID,element['label']+'[0]',c0,float(element['scale']),HEXDATA,Verbose)
-                                c1b=float(DATA[1]*2.4)/100
-                                c1e=float((DATA[5]&0xF0>>4)*0.002)
-                                c1=round(c1b+c1e,3)
+                                c1=float(DATA[1]<<4 | (DATA[5]&0xF0>>4))
+                                c1=round((c1*1.5)/1000,3)                                
                                 printParsedField(count,TIME,ID,element['label']+'[1]',c1,float(element['scale']),HEXDATA,Verbose)
-                                c2b=float(DATA[2]*2.4)/100
-                                c2e=float((DATA[6]&0x0F)*0.002)
-                                c2=round(c2b+c2e,3)
+                                c2=float(DATA[2]<<4 | (DATA[6]&0x0F))
+                                c2=round((c2*1.5)/1000,3)    
                                 printParsedField(count,TIME,ID,element['label']+'[2]',c2,float(element['scale']),HEXDATA,Verbose)
-                                c3b=float(DATA[3]*2.4)/100
-                                c3e=float((DATA[6]&0xF0>>4)*0.002)
-                                c3=round(c3b+c3e,3)
+                                c3=float(DATA[3]<<4 | (DATA[6]&0xF0>>4))
+                                c3=round((c3*1.5)/1000,3)                                 
                                 printParsedField(count,TIME,ID,element['label']+'[3]',c3,float(element['scale']),HEXDATA,Verbose)
-                                c4b=float(DATA[4]*2.4)/100
-                                c4e=float((DATA[7]&0x0F)*0.002)
-                                c4=round(c4b+c4e,3)
+                                c4=float(DATA[4]<<4 | (DATA[7]&0x0F))
+                                c4=round((c4*1.5)/1000,3)                                  
                                 printParsedField(count,TIME,ID,element['label']+'[4]',c4,float(element['scale']),HEXDATA,Verbose)
                                 addSA(ID,str(c0)+';'+str(c1)+';'+str(c2)+';'+str(c3)+';'+str(c4),element)
                                 #printParsedField(count,TIME,ID,element['label'],str(c0)+';'+str(c1)+';'+str(c2)+';'+str(c3)+';'+str(c4),None,HEXDATA,Verbose)
@@ -290,7 +285,7 @@ def interpret(c,lastTIME,Elapsed,Verbose,FilterSA,FilterID,TIME,ID,SA,LEN,HEXDAT
                         addSA(ID,val,element)
                     elif element['units'] == 'BMS': # its a BMS message  decode accordingly
                         # High cell voltage
-                        val=((DATA[4]&0x0F)<<8)|DATA[3] #Bits 11-8 are the lowest 4 bits of 4, bits 7-0 are in byte 3
+                        val=((DATA[int(list[1])]&0x0F)<<8)|DATA[int(list[0])] #Bits 11-8 are the lowest 4 bits of 4, bits 7-0 are in byte 3
                         printParsedField(count,TIME,ID,element['label'],val,float(element['scale']),HEXDATA,Verbose)
                         scalledval=round(val*float(element['scale']),3)
                         addSA(ID,scalledval,element)                      
