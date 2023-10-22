@@ -3,6 +3,7 @@ import xml.dom.minidom
 import datetime
 import argparse
 import time
+import curses
 
 ### global section
 CSVLINE="" # buffer to store each field to be printed, until a single line is completed
@@ -72,48 +73,198 @@ def addSA(ID,val,element):
 x_labels={}
 x_n_labels=0
 x_output={}
+BMS_nr=0
 #
 # for every field parsed, print it
 #
-def printParsedField(countLinePF,TIME,ID,label,value,scale,hex,Verbose):
-    global x_labels,x_n_labels,x_output
+def printParsedField(countLinePF,TIME,ID,label,value,scale,hex,Verbose,):
+    global x_labels,x_n_labels,x_output,stdscr
     if countLinePF<16: # header of the PEAK file
         return ""
     global CSVLINE
-    if Verbose==1:
-        if scale != None:
-            print(countLinePF,TIME,ID,label,'=',round(value*scale,3))
+    if args.service:
+        printService(label, value, scale)                                                                                                                                                                                                                                                                                                                     
+    else:
+        if Verbose==1:
+            if scale != None:
+                print(countLinePF,TIME,ID,label,'=',round(value*scale,3))
+            else:
+                print(countLinePF,TIME,ID,label,'=',value)
+        if Verbose==2:
+            if scale != None:
+                print(countLinePF,TIME,ID,label,'=',round(value*scale,3),hex)
+            else:
+                print(countLinePF,TIME,ID,label,'=',value,hex)
+        if Verbose==3:
+            binary=''
+            for byte in hex.split(' '):
+                binary=binary+' '+bin(int(byte, 16))[2:].zfill(8)
+            if scale != None:
+                print(countLinePF,TIME,ID,label,'=',round(value*scale,3),binary)
+            else:
+                print(countLinePF,TIME,ID,label,'=',value,binary)
+        if Verbose==300 and label!='data':
+            if type(value) == int or type(value) == float:
+                value = round(value*scale,3)
+            if not label in x_labels:
+                x_n_labels=x_n_labels+1
+                x_labels[label]=x_n_labels          
+            if not countLinePF in x_output: 
+                x_output[countLinePF]={x_labels[label]:value}
+                #print(countLinePF,label,value)
+            else:
+                x_output[countLinePF][x_labels[label]]=value
+                #print(countLinePF,label,value,x_output[countLinePF],x_labels[label],x_output[countLinePF][x_labels[label]])
+        if (Verbose==100 or Verbose==200 ): # Override verbose, print CSV Line
+            if type(value) == int or type(value) == float:
+                value = round(value*scale,3)
+            CSVLINE=CSVLINE+label+' = '+str(value)+'; ' 
+
+def printService(label, value, scale):
+    global BMS_nr
+    if label=='Time':
+        stdscr.addstr(2,80,'Time: '+str(value))
+    if label=='Plug icon':
+        stdscr.addstr(2,2,'Pluged  : '+str(value))
+    if label=='Charge icon':
+        stdscr.addstr(3,2,'Charging: '+str(value))    
+    if label=='Battery Voltage':
+        stdscr.addstr(5,2,'Battery Volts. : '+str(int(round(value*scale,0)))+' V') 
+    if label=='Charger Current':
+        stdscr.addstr(6,2,'Charger Current: '+str(round(value*scale,2))+' A')   
+    if label=='Vehicle Speed':            
+        stdscr.addstr(6,28,'Speed indicator: '+str(round(value*scale,2))) 
+    if label=='Gauge level':
+        stdscr.addstr(8,2,'Gauge level    : '+str(round(value*scale*100,2))+' %')   
+    if label=='Li Board number': # for this to work this field needs to be first than others Board fields in the XML
+        BMS_nr=value           
+    if label=='Li Board Temperature Low':
+        if BMS_nr==0:
+            stdscr.addstr(12,4,'Board 0: '+str(int(value*scale))+' C')      
+        if BMS_nr==1:
+            stdscr.addstr(13,4,'Board 1: '+str(int(value*scale))+' C')
+        if BMS_nr==2:
+            stdscr.addstr(14,4,'Board 2: '+str(int(value*scale))+' C')  
+    if label=='Li Board Temperature High':
+        v=int(value*scale)
+        if v<40:
+            attr=curses.A_NORMAL
         else:
-            print(countLinePF,TIME,ID,label,'=',value)
-    if Verbose==2:
-        if scale != None:
-            print(countLinePF,TIME,ID,label,'=',round(value*scale,3),hex)
+            attr=curses.A_STANDOUT
+        if BMS_nr==0:
+            stdscr.addstr(12,19,str(v)+' C',attr)      
+        if BMS_nr==1:
+            stdscr.addstr(13,19,str(v)+' C',attr)
+        if BMS_nr==2:
+            stdscr.addstr(14,19,str(v)+' C',attr)         
+    if label=='Li Board Temperature Amb':
+        if BMS_nr==0:
+            stdscr.addstr(12,25,str(int(value*scale))+' C')      
+        if BMS_nr==1:
+            stdscr.addstr(13,25,str(int(value*scale))+' C')
+        if BMS_nr==2:
+            stdscr.addstr(14,25,str(int(value*scale))+' C')  
+    if label=='Li Board Low Cell Voltage':
+        if BMS_nr==0:
+            stdscr.addstr(12,31,str(round(value*scale,3)))
+        if BMS_nr==1:
+            stdscr.addstr(13,31,str(round(value*scale,3)))
+        if BMS_nr==2:
+            stdscr.addstr(14,31,str(round(value*scale,3)))
+    if label=='Li Board Low Cell':
+        if BMS_nr==0:
+            stdscr.addstr(12,37,str(int(value*scale))+' ')
+        if BMS_nr==1:
+            stdscr.addstr(13,37,str(int(value*scale))+' ')
+        if BMS_nr==2:
+            stdscr.addstr(14,37,str(int(value*scale))+' ')  
+    if label=='Li Board Hi Cell Voltage':
+        v=value*scale
+        if v<=4.13:
+            attr=curses.A_NORMAL
         else:
-            print(countLinePF,TIME,ID,label,'=',value,hex)
-    if Verbose==3:
-        binary=''
-        for byte in hex.split(' '):
-            binary=binary+' '+bin(int(byte, 16))[2:].zfill(8)
-        if scale != None:
-            print(countLinePF,TIME,ID,label,'=',round(value*scale,3),binary)
-        else:
-            print(countLinePF,TIME,ID,label,'=',value,binary)
-    if Verbose==300 and label!='data':
-        if type(value) == int or type(value) == float:
-            value = round(value*scale,3)
-        if not label in x_labels:
-            x_n_labels=x_n_labels+1
-            x_labels[label]=x_n_labels          
-        if not countLinePF in x_output: 
-            x_output[countLinePF]={x_labels[label]:value}
-            #print(countLinePF,label,value)
-        else:
-            x_output[countLinePF][x_labels[label]]=value
-            #print(countLinePF,label,value,x_output[countLinePF],x_labels[label],x_output[countLinePF][x_labels[label]])
-    if (Verbose==100 or Verbose==200 ): # Override verbose, print CSV Line
-        if type(value) == int or type(value) == float:
-            value = round(value*scale,3)
-        CSVLINE=CSVLINE+label+' = '+str(value)+'; ' # instead of printing, add to the print buffer until a full line is completed
+            attr=curses.A_STANDOUT
+        if BMS_nr==0:
+            stdscr.addstr(12,43,str(round(v,3)),attr)
+        if BMS_nr==1:
+            stdscr.addstr(13,43,str(round(v,3)),attr)
+        if BMS_nr==2:
+            stdscr.addstr(14,43,str(round(v,3)),attr)
+    if label=='Li Board Hi Cell':
+        if BMS_nr==0:
+            stdscr.addstr(12,49,str(int(value*scale))+' ')
+        if BMS_nr==1:
+            stdscr.addstr(13,49,str(int(value*scale))+' ')
+        if BMS_nr==2:
+            stdscr.addstr(14,49,str(int(value*scale))+' ')
+    if label=='Motor Controller Temp':
+        stdscr.addstr(17,4,'Temp: '+str(int(value*scale))+' C')
+    if label=='Cap1 Temperature':
+        stdscr.addstr(17,16,str(int(value*scale))+' C')        
+    if label=='Cap2 Temperature':
+        stdscr.addstr(17,22,str(int(value*scale))+' C')  
+    if label=='Cap3 Temperature':
+        stdscr.addstr(17,28,str(int(value*scale))+' C')    
+    if label=='Cell 5 Voltage[0]':          
+        stdscr.addstr(7,61,'Cell  1: '+str(round(value*scale,3)))
+    if label=='Cell 5 Voltage[1]':
+        stdscr.addstr(8,61,'Cell  2: '+str(round(value*scale,3)))
+    if label=='Cell 5 Voltage[2]':
+        stdscr.addstr(9,61,'Cell  3: '+str(round(value*scale,3)))
+    if label=='Cell 5 Voltage[3]':
+        stdscr.addstr(10,61,'Cell  4: '+str(round(value*scale,3)))
+    if label=='Cell 5 Voltage[4]':
+        stdscr.addstr(11,61,'Cell  5: '+str(round(value*scale,3))) 
+    if label=='Cell 10 Voltage[0]':
+        stdscr.addstr(12,61,'Cell  6: '+str(round(value*scale,3)))
+    if label=='Cell 10 Voltage[1]':
+        stdscr.addstr(13,61,'Cell  7: '+str(round(value*scale,3)))
+    if label=='Cell 10 Voltage[2]':
+        stdscr.addstr(14,61,'Cell  8: '+str(round(value*scale,3)))
+    if label=='Cell 10 Voltage[3]':
+        stdscr.addstr(15,61,'Cell  9: '+str(round(value*scale,3)))
+    if label=='Cell 10 Voltage[4]':
+        stdscr.addstr(16,61,'Cell 10: '+str(round(value*scale,3)))
+    if label=='Cell 15 Voltage[0]':           
+        stdscr.addstr(7,77,str(round(value*scale,3)))
+    if label=='Cell 15 Voltage[1]':
+        stdscr.addstr(8,77,str(round(value*scale,3)))
+    if label=='Cell 15 Voltage[2]':
+        stdscr.addstr(9,77,str(round(value*scale,3)))
+    if label=='Cell 15 Voltage[3]':
+        stdscr.addstr(10,77,str(round(value*scale,3)))
+    if label=='Cell 15 Voltage[4]':
+        stdscr.addstr(11,77,str(round(value*scale,3))) 
+    if label=='Cell 20 Voltage[0]':
+        stdscr.addstr(12,77,str(round(value*scale,3)))
+    if label=='Cell 20 Voltage[1]':
+        stdscr.addstr(13,77,str(round(value*scale,3)))
+    if label=='Cell 20 Voltage[2]':
+        stdscr.addstr(14,77,str(round(value*scale,3)))
+    if label=='Cell 20 Voltage[3]':
+        stdscr.addstr(15,77,str(round(value*scale,3)))
+    if label=='Cell 20 Voltage[4]':
+        stdscr.addstr(16,77,str(round(value*scale,3)))
+    if label=='Cell 25 Voltage[0]':
+        stdscr.addstr(7,84,str(round(value*scale,3)))
+    if label=='Cell 25 Voltage[1]':
+        stdscr.addstr(8,84,str(round(value*scale,3)))
+    if label=='Cell 25 Voltage[2]':
+        stdscr.addstr(9,84,str(round(value*scale,3)))
+    if label=='Cell 25 Voltage[3]':
+        stdscr.addstr(10,84,str(round(value*scale,3)))
+    if label=='Cell 25 Voltage[4]':
+        stdscr.addstr(11,84,str(round(value*scale,3))) 
+    if label=='Cell 30 Voltage[0]':
+        stdscr.addstr(12,84,str(round(value*scale,3)))
+    if label=='Cell 30 Voltage[1]':
+        stdscr.addstr(13,84,str(round(value*scale,3)))
+    if label=='Cell 30 Voltage[2]':
+        stdscr.addstr(14,84,str(round(value*scale,3)))
+    if label=='Cell 30 Voltage[3]':
+        stdscr.addstr(15,84,str(round(value*scale,3)))
+    if label=='Cell 30 Voltage[4]':
+        stdscr.addstr(16,84,str(round(value*scale,3)))# instead of printing, add to the print buffer until a full line is completed
 
 #
 # Parses a line of log recorded by the record.py script
@@ -371,6 +522,7 @@ argParser.add_argument('-sa',nargs=1,help='filter and only process this Source A
 argParser.add_argument('-id',nargs=1,help='filter and only process this ID + SA')
 argParser.add_argument('-sample',nargs=1,help='merges N lines into a single one')
 argParser.add_argument('-m',action='store_const',const=True, default=False,help='monitor a given ID (use with -id and one of -v, -vv, -vvv or -o)')
+argParser.add_argument('-service',action='store_const',const=True, default=False,help='show Vectrix service data (hardcoded values not configurable)')
 args = argParser.parse_args()
 
 if (args.m and not args.id) or (args.m and (not args.v and not args.vv and not args.vvv and not args.o)):
@@ -393,6 +545,25 @@ if args.o:
 if args.x or args.xx or args.xxx:
     verbose=300
     args.q=True
+
+if args.service:
+    stdscr = curses.initscr()
+    curses.noecho()
+    curses.cbreak()
+    stdscr.keypad(True)
+    stdscr.addstr('CAN Bus monitor',curses.A_BOLD)
+    stdscr.addstr(10,16,' Temperature')
+    stdscr.addstr(11,13,'Low   High  Amb')
+    stdscr.addstr(10,33,'Voltage')
+    stdscr.addstr(11,31,'Low (Cell)  High (Cell)')  
+    stdscr.addstr(16,11,'MC')
+    stdscr.addstr(16,16,'Cap1')
+    stdscr.addstr(16,22,'Cap2')
+    stdscr.addstr(16,28,'Cap3')
+    stdscr.addstr(5,70,'Brd 0')
+    stdscr.addstr(5,77,'Brd 1')
+    stdscr.addstr(5,84,'Brd 2')             
+
 
 elapsed=args.e
 filterSA=args.sa
@@ -422,6 +593,8 @@ while True and (args.c==0 or count < args.c):
             break
     if args.d:
         print(line.strip())
+    if args.service:
+        stdscr.refresh()
 
     if count>args.s:
         if args.pcan:
@@ -480,3 +653,8 @@ if args.x or args.xx or args.xxx:
                 line=line+line_value[val]+'\t'
             print(line)
     
+if args.service:
+    curses.nocbreak()
+    stdscr.keypad(False)
+    curses.endwin()
+    curses.echo()

@@ -1634,6 +1634,20 @@
       <Selected>0</Selected>
       <UnitsClass>Voltage</UnitsClass>
     </PGN>
+    <PGN>
+      <Label>Li Board number</Label> <!-- this needs to be the 1st PGN in this ID for the board nr parsing to work in service mode-->
+      <checked>True</checked>
+      <PGNHash>95</PGNHash>
+      <ID>FEF3</ID>
+      <SA>40</SA>
+      <Bytes>7</Bytes>
+      <Bits>4 5 6 7</Bits>
+      <ScaleFactor>1</ScaleFactor>
+      <Units>BMS</Units>
+      <Plottable>1</Plottable>
+      <Selected>0</Selected>
+      <UnitsClass>N/A</UnitsClass>
+    </PGN>      
 	<PGN>
       <Label>Li Board Temperature Low</Label>
       <checked>True</checked>
@@ -1717,21 +1731,7 @@
       <Plottable>1</Plottable>
       <Selected>0</Selected>
       <UnitsClass>N/A</UnitsClass>
-    </PGN>
-    <PGN>
-      <Label>Li Board number</Label>
-      <checked>True</checked>
-      <PGNHash>95</PGNHash>
-      <ID>FEF3</ID>
-      <SA>40</SA>
-      <Bytes>7</Bytes>
-      <Bits>4 5 6 7</Bits>
-      <ScaleFactor>1</ScaleFactor>
-      <Units>BMS</Units>
-      <Plottable>1</Plottable>
-      <Selected>0</Selected>
-      <UnitsClass>N/A</UnitsClass>
-    </PGN>         
+    </PGN>      
 	<PGN>
       <Label>Li Board0 Low Temperature</Label>
       <PGNHash>96</PGNHash>
